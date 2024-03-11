@@ -1,6 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
+import LetterG from '@/data/LetterG.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -10,10 +11,11 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between py-10">
       <div>
-        <Link href="/" aria-label={siteMetadata.headerTitle}>
+        <Link href="/" aria-label={siteMetadata.headerTitle} className="hidden">
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <Logo />
+              <LetterG />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">
@@ -26,7 +28,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {headerNavLinks
+        {/* {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
             <Link
@@ -36,10 +38,10 @@ const Header = () => {
             >
               {link.title}
             </Link>
-          ))}
-        <SearchButton />
+          ))} */}
+        {/* <SearchButton /> */}
         <ThemeSwitch />
-        <MobileNav />
+        {/* <MobileNav /> */}
       </div>
     </header>
   )

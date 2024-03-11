@@ -12,29 +12,30 @@ export default function Home({ posts }) {
       <div className="my-6 flex flex-col items-center gap-x-12 xl:mb-12 xl:flex-row">
         <div className="mr-8 pt-6">
           <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Hi, I’m Timothy Lin
+            Hi, I’m Abdul
           </h1>
           <h2 className="prose text-lg text-gray-600 dark:text-gray-400">
-            {`Welcome to my blog - ${siteMetadata.description}. I am the co-founder of Cylynx, a data
-            scientist by profession and economist by training. In my free time, I like developing `}
-            <Link href="/projects">side projects</Link>
-            {' and '}
-            <Link href="/blog">blogging</Link>
-            {' about them. Have a good read!'}
+            {`Welcome to my page - ${siteMetadata.description}. I am an engineer by profession and an athlete by imagination. In my free time, I like working on `}
+            <Link href="/">side projects</Link>
+            {', picking up a new hobby, and '}
+            <Link href="/" className="disabled:opacity-75">
+              blogging
+            </Link>
+            {' about my journey. welcome aboard!'}
           </h2>
         </div>
         <div className="mx-2 my-12 flex w-[300px] items-center justify-center sm:w-[400px] md:w-[550px]">
-          <NewsletterForm title="Stay updated, receive the latest post straight to your mailbox" />
+          {/* <NewsletterForm title="Stay updated, receive the latest post straight to your mailbox" /> */}
         </div>
       </div>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="hidden divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
+          {/* {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
             return (
@@ -82,10 +83,10 @@ export default function Home({ posts }) {
                 </article>
               </li>
             )
-          })}
+          })} */}
         </ul>
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
@@ -95,7 +96,7 @@ export default function Home({ posts }) {
             All Posts &rarr;
           </Link>
         </div>
-      )}
+      )} */}
     </>
   )
 }
